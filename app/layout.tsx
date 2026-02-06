@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ParallaxProvider from "@/components/ParallaxProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -80,14 +81,16 @@ export default function RootLayout({
   return (
     <html lang="es" className={inter.variable}>
       <body className="min-h-screen flex flex-col">
-        <a href="#main-content" className="skip-link">
-          Saltar al contenido principal
-        </a>
-        <Header />
-        <main id="main-content" className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <ParallaxProvider>
+          <a href="#main-content" className="skip-link">
+            Saltar al contenido principal
+          </a>
+          <Header />
+          <main id="main-content" className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </ParallaxProvider>
       </body>
     </html>
   );

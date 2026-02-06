@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Parallax } from 'react-scroll-parallax';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const registrationOptions = [
@@ -65,20 +66,22 @@ export default function InscripcionesPage() {
     <div className="bg-white">
       {/* Hero with Image */}
       <section className="relative h-[60vh] min-h-[450px] overflow-hidden">
-        <motion.div
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          className="absolute inset-0"
-        >
-          <Image
-            src="/images/hero/hero-basketball-3.jpg"
-            alt="Inscripciones Askatuak"
-            fill
-            className="object-cover"
-            priority
-          />
-        </motion.div>
+        <Parallax speed={-15} className="absolute inset-0 h-[120%]">
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+            className="relative w-full h-full"
+          >
+            <Image
+              src="/images/hero/hero-basketball-3.jpg"
+              alt="Inscripciones Askatuak"
+              fill
+              className="object-cover"
+              priority
+            />
+          </motion.div>
+        </Parallax>
         <div className="absolute inset-0 bg-gradient-to-r from-askatuak-blue-900/95 to-askatuak-blue-900/70" />
         <div className="relative z-10 h-full flex items-center">
           <div className="container-custom">
@@ -214,15 +217,17 @@ export default function InscripcionesPage() {
 
       {/* Contact CTA */}
       <section className="relative py-32 lg:py-40 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/basketball/basketball-court-1.jpg"
-            alt="Background"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-askatuak-blue-900/90" />
-        </div>
+        <Parallax speed={-10} className="absolute inset-0">
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/basketball/basketball-court-1.jpg"
+              alt="Background"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-askatuak-blue-900/90" />
+          </div>
+        </Parallax>
         <div className="relative z-10 container-custom">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Parallax } from 'react-scroll-parallax';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const stats = [
@@ -46,20 +47,22 @@ export default function Aniversario50Page() {
     <div className="bg-white">
       {/* Hero with Image */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <motion.div
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          className="absolute inset-0"
-        >
-          <Image
-            src="/images/hero/hero-basketball-2.jpg"
-            alt="50 Aniversario Askatuak"
-            fill
-            className="object-cover"
-            priority
-          />
-        </motion.div>
+        <Parallax speed={-20} className="absolute inset-0 h-[120%]">
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+            className="relative w-full h-full"
+          >
+            <Image
+              src="/images/hero/hero-basketball-2.jpg"
+              alt="50 Aniversario Askatuak"
+              fill
+              className="object-cover"
+              priority
+            />
+          </motion.div>
+        </Parallax>
         <div className="absolute inset-0 bg-gradient-to-b from-askatuak-blue-900/60 via-askatuak-accent/20 to-askatuak-blue-900/80" />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="container-custom text-center text-white">
@@ -208,15 +211,17 @@ export default function Aniversario50Page() {
 
       {/* Special Events */}
       <section className="relative py-32 lg:py-40 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/basketball/basketball-crowd-1.jpg"
-            alt="Background"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-askatuak-blue-900/90" />
-        </div>
+        <Parallax speed={-12} className="absolute inset-0">
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/basketball/basketball-crowd-1.jpg"
+              alt="Background"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-askatuak-blue-900/90" />
+          </div>
+        </Parallax>
         <div className="relative z-10 container-custom">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-center text-white mb-4">

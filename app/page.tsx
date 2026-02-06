@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Parallax } from 'react-scroll-parallax';
 import AnimatedCard from '@/components/cards/AnimatedCard';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 
@@ -82,21 +83,23 @@ export default function Home() {
       {/* ========== HERO SECTION ========== */}
       <section className="relative h-screen min-h-[700px] overflow-hidden">
         {/* Parallax Background */}
-        <motion.div
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          className="absolute inset-0"
-        >
-          <Image
-            src="/images/hero/hero-basketball-1.jpg"
-            alt="Askatuak Basketball"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
-        </motion.div>
+        <Parallax speed={-20} className="absolute inset-0 h-[120%]">
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+            className="relative w-full h-full"
+          >
+            <Image
+              src="/images/hero/hero-basketball-1.jpg"
+              alt="Askatuak Basketball"
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+            />
+          </motion.div>
+        </Parallax>
 
         {/* Dark Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-askatuak-blue-900/70 via-askatuak-blue-900/50 to-askatuak-blue-900/90" />
@@ -178,15 +181,17 @@ export default function Home() {
       {/* ========== 50 ANIVERSARIO BANNER ========== */}
       <section className="relative py-32 lg:py-40 overflow-hidden">
         {/* Background Image with Parallax Effect */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/basketball/basketball-action-1.jpg"
-            alt="50 Aniversario"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-askatuak-blue-900/90" />
-        </div>
+        <Parallax speed={-15} className="absolute inset-0">
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/basketball/basketball-action-1.jpg"
+              alt="50 Aniversario"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-askatuak-blue-900/90" />
+          </div>
+        </Parallax>
 
         {/* Content */}
         <div className="relative z-10 container-custom">
@@ -350,15 +355,17 @@ export default function Home() {
       {/* ========== FINAL CTA ========== */}
       <section className="relative py-32 lg:py-40 overflow-hidden">
         {/* Background */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/basketball/basketball-action-2.jpg"
-            alt="Únete a Askatuak"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-askatuak-blue-900/90" />
-        </div>
+        <Parallax speed={-10} className="absolute inset-0">
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/basketball/basketball-action-2.jpg"
+              alt="Únete a Askatuak"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-askatuak-blue-900/90" />
+          </div>
+        </Parallax>
 
         {/* Content */}
         <div className="relative z-10 container-custom">
