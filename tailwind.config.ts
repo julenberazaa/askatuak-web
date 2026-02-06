@@ -49,6 +49,7 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['SF Mono', 'Monaco', 'monospace'],
+        bebas: ['var(--font-bebas)', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',

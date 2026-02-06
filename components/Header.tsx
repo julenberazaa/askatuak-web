@@ -66,7 +66,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center pb-1">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="relative w-16 h-16 bg-white rounded-lg p-1">
+              <div className="relative w-16 h-16">
                 <Image
                   src="/images/brand/logo.png"
                   alt="Askatuak Saski Baloi Taldea Logo"
@@ -77,7 +77,7 @@ export default function Header() {
                 />
               </div>
               <div className="hidden sm:block">
-                <div className="text-xl font-bold text-gray-900">ASKATUAK SASKI BALOI TALDEA</div>
+                <div className="text-xl font-bebas tracking-wide text-gray-900">ASKATUAK SASKI BALOI TALDEA</div>
                 <div className="text-xs text-gray-600">Desde 1975</div>
               </div>
             </Link>
