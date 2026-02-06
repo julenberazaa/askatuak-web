@@ -232,11 +232,11 @@ export default function InscripcionesPage() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-8">
-                ¿Tienes dudas?
+                RENOVACIONES TEMPORADA
               </h2>
               <p className="text-xl text-slate-300 mb-12 leading-relaxed">
-                Contacta con nosotros y te ayudaremos a encontrar la mejor opción
-                para ti o tu hijo/a.
+                ¿Ya formas parte de Askatuak? Renueva tu inscripción para la temporada 2025/2026.
+                Contacta con nosotros para más información.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
                 <Link

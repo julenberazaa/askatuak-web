@@ -45,6 +45,15 @@ const navigation = [
       { name: 'Leyendas', href: '/leyendas' },
     ],
   },
+  {
+    name: 'Galería',
+    href: '#',
+    children: [
+      { name: 'Fotos', href: '/galeria/fotos' },
+      { name: 'Videos', href: '/galeria/videos' },
+      { name: 'Presentaciones', href: '/galeria/presentaciones' },
+    ],
+  },
 ];
 
 export default function Header() {
@@ -57,18 +66,18 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center pb-1">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="relative w-12 h-12">
+              <div className="relative w-16 h-16 bg-white rounded-lg p-1">
                 <Image
                   src="/images/brand/logo.png"
-                  alt="Askatuak SBT Logo"
-                  width={48}
-                  height={48}
+                  alt="Askatuak Saski Baloi Taldea Logo"
+                  width={64}
+                  height={64}
                   className="object-contain"
                   priority
                 />
               </div>
               <div className="hidden sm:block">
-                <div className="text-xl font-bold text-gray-900">ASKATUAK SBT</div>
+                <div className="text-xl font-bold text-gray-900">ASKATUAK SASKI BALOI TALDEA</div>
                 <div className="text-xs text-gray-600">Desde 1975</div>
               </div>
             </Link>
@@ -78,13 +87,13 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-1">
             <Link
               href="/"
-              className="px-4 py-2 text-sm font-semibold text-gray-900 hover:text-askatuak-blue transition-colors"
+              className="px-4 py-2 text-base font-semibold text-gray-900 hover:text-askatuak-blue transition-colors"
             >
               Inicio
             </Link>
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
-                <button className="px-4 py-2 text-sm font-semibold text-gray-900 hover:text-askatuak-blue transition-colors">
+                <button className="px-4 py-2 text-base font-semibold text-gray-900 hover:text-askatuak-blue transition-colors">
                   {item.name}
                 </button>
                 {/* Dropdown */}
@@ -107,7 +116,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <Link
               href="/inscripciones"
-              className="hidden sm:inline-flex items-center px-6 py-2.5 bg-askatuak-accent text-white text-sm font-semibold rounded-xl hover:bg-askatuak-accent-hover transition-all hover:shadow-2xl hover:-translate-y-1"
+              className="hidden sm:inline-flex items-center px-6 py-2.5 bg-orange-500 text-white text-sm font-semibold rounded-xl hover:bg-orange-600 transition-all hover:shadow-2xl hover:-translate-y-1"
             >
               Inscripciones →
             </Link>
@@ -143,7 +152,7 @@ export default function Header() {
 
             <Link
               href="/inscripciones"
-              className="block px-4 py-3 text-base font-semibold bg-askatuak-accent text-white rounded-xl text-center mb-4"
+              className="block px-4 py-3 text-base font-semibold bg-orange-500 text-white rounded-xl text-center mb-4"
               onClick={() => setMobileMenuOpen(false)}
             >
               Inscripciones →
