@@ -77,7 +77,7 @@ export default function Header() {
                 />
               </div>
               <div className="hidden sm:block">
-                <div className="text-xl font-bebas tracking-wide text-gray-900">ASKATUAK SASKI BALOI TALDEA</div>
+                <div className="text-xl font-euskal tracking-wide text-gray-900">ASKATUAK SASKI BALOI TALDEA</div>
                 <div className="text-xs text-gray-600">Desde 1975</div>
               </div>
             </Link>
