@@ -49,7 +49,7 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['SF Mono', 'Monaco', 'monospace'],
-        euskal: ['Neo Euskal Herria', 'sans-serif'],
+        euskal: ['NeoEuskalHerria', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',
