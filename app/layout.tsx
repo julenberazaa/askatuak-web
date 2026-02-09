@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,6 +10,12 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+});
+
+const euskalHerria = localFont({
+  src: "../public/fonts/NeoEuskalHerria.otf",
+  variable: "--font-euskal",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -79,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={inter.variable}>
+    <html lang="es" className={`${inter.variable} ${euskalHerria.variable}`}>
       <body className="min-h-screen flex flex-col">
         <ParallaxProvider>
           <a href="#main-content" className="skip-link">

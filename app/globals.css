@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Neo Euskal Herria - Tipografía Vasca */
-@font-face {
-  font-family: 'NeoEuskalHerria';
-  src: url('/fonts/NeoEuskalHerria.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   /* Design Tokens - Real Madrid Inspired */
   --color-primary: #1E3A8A;
